@@ -1,0 +1,248 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: darkslategrey;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: space-between;    
+}
+
+h1 {
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    width: 100%;    
+}
+
+#nav-menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#nav-menu ul li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none; 
+    color: white; 
+}
+
+a:hover {
+    color: lightgray; 
+    text-decoration: underline; 
+}
+
+#nav-menu ul li a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: black; 
+    transition: background-color 0.3s ease;
+}
+
+#nav-menu ul li a:hover {
+    background-color: darkslategray;
+}
+
+#my-pic {
+    height: fill;
+    width: 100px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}    
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;  
+    padding: 20px;  
+    margin: 20px;
+}
+
+#part-1 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+#course-work-card {
+    flex: 2;      
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+}
+
+#course-work-card h2 {
+    background-color: darkslategray;
+    margin-top: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;   
+    color: white; 
+}
+
+#country-card {
+    flex: 1;    
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
+    border-radius: 8px;
+    align-items: center;
+    
+}
+
+#country-card img {
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto;
+}    
+
+#country-card h2 {
+    background-color: darkslategrey;
+    margin-top: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;   
+    color: white; 
+}
+
+#country-card img {
+    align-items: center;
+}
+
+#certificate-details {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#certificate-details h2 {
+    background-color: darkslategrey;
+    margin-top: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;   
+    color: white; 
+}
+
+#buttons nav {
+    justify-content: center;
+}
+
+#buttons nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: slategray;
+}
+
+#courses ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#courses li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: darkslategrey;
+    color: white;
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+
+/* Media Queries for Mobile View */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;       
+        
+    }
+
+    #nav-menu{
+        display: none;
+        flex-direction: column; 
+        align-items: center; 
+        background-color: black;
+    }
+
+    #nav-menu.active {
+        display: flex; 
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        align-items: center;    
+    }    
+
+    #part-1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #course-work-card, #country-card, #certificate-details {
+        width: 100%;
+    }
+    
+    #courses ul {
+        grid-template-columns: 1fr; /* One column for mobile */
+    }
+}
