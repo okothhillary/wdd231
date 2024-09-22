@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Get the last modified date
     const lastModified = document.lastModified;
-    document.getElementById('lastModified').innerHTML = `Last Modified: ${lastModified}`;
+    document.getElementById('lastModified').innerHTML = `Last Modified: ${lastModified}`;   
     
-    
-
-    
-
     const courses = [
         {
             subject: 'CSE',
@@ -141,5 +137,10 @@ document.addEventListener('DOMContentLoaded', function () {
     hamburger.addEventListener('click', function () {
         navMenu.classList.toggle('active');
         hamburger.textContent = navMenu.classList.contains('active') ? 'X' : '☰';
-    });    
+    });
+
+    
+    const totalCredits = courses.reduce((accumulator, course) => accumulator + course.credits, 0);
+    document.getElementById('credits').innerHTML += `<p>Total Credits: ${totalCredits}</p>`;
+
 });
