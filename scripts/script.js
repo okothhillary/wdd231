@@ -141,6 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
     const totalCredits = courses.reduce((accumulator, course) => accumulator + course.credits, 0);
-    document.getElementById('credits').innerHTML += `<p>Total Credits: ${totalCredits}</p>`;
+    document.getElementById('credits').innerHTML += `<p>${totalCredits}</p>`;
 
 });
