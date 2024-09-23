@@ -40,6 +40,11 @@ nav {
     margin: 0 10px;
 }
 
+#nav-menu ul li a.active {
+    background-color: burlywood;
+    color: white;
+}
+
 a {
     text-decoration: none; 
     color: white; 
@@ -169,6 +174,12 @@ main {
 #buttons button:hover {
     background-color: slategray;
 }
+
+#buttons button.active {
+    background-color: burlywood; /* Change background for active buttons */
+    color: white;
+}
+
 
 #courses ul {
     display: grid;

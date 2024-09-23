@@ -139,8 +139,37 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger.textContent = navMenu.classList.contains('active') ? 'X' : '☰';
     });
 
+    function highlightActiveLink() {
+        const links = document.querySelectorAll('#nav-menu a');
+        const currentPage = window.location.href;
     
+        links.forEach(link => {
+            if (link.href === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    highlightActiveLink();
+
+
+    function highlightActiveButton() {
+        const filterButtons = document.querySelectorAll('#buttons button');
+    
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active')); // Remove active class from all buttons
+                button.classList.add('active');
+            });
+        });
+    }
+      
+    highlightActiveButton();
+
     const totalCredits = courses.reduce((accumulator, course) => accumulator + course.credits, 0);
     document.getElementById('credits').innerHTML += `<p>${totalCredits}</p>`;
 
+    
 });
