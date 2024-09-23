@@ -41,7 +41,7 @@ nav {
 }
 
 #nav-menu ul li a.active {
-    background-color: burlywood;
+    background-color: rgb(225, 135, 19);
     color: white;
 }
 
@@ -59,7 +59,6 @@ a:hover {
     padding: 10px 15px;
     border-radius: 5px;
     background-color: black; 
-    transition: background-color 0.3s ease;
 }
 
 #nav-menu ul li a:hover {
@@ -176,7 +175,7 @@ main {
 }
 
 #buttons button.active {
-    background-color: burlywood; /* Change background for active buttons */
+    background-color: rgb(231, 139, 19); 
     color: white;
 }
 
