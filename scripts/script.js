@@ -115,13 +115,23 @@ document.addEventListener('DOMContentLoaded', function () {
             ul.appendChild(li);
             li.textContent = `${course.subject} ${course.number}`;
             li.style.color = course.completed ? 'blue' : 'brown';
-        });
 
-        
+            const statusIcon = document.createElement('span');
+            if (course.completed) {
+                statusIcon.textContent = '✔️';
+                
+            } else {
+                statusIcon.textContent = '❌';                 
+            }
+            
+            li.appendChild(statusIcon);
+            ul.appendChild(li);
+        }); 
     
         coursesDiv.appendChild(ul);
-    }
-      
+
+    
+    }      
     
     document.querySelector('.filter-all').addEventListener('click', () => displayCourses());
     document.querySelector('.filter-cse').addEventListener('click', () => displayCourses('CSE'));

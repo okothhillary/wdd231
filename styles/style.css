@@ -108,7 +108,9 @@ main {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
     border-radius: 8px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
@@ -116,6 +118,7 @@ main {
     max-width: 100%; 
     height: auto;
     margin: 0 auto;
+    
 }    
 
 #country-card h2 {
@@ -128,7 +131,7 @@ main {
 }
 
 #country-card img {
-    align-items: center;
+    align-items: center
 }
 
 #certificate-details {
