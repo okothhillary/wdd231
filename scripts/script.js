@@ -125,9 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     document.querySelector('.filter-all').addEventListener('click', () => displayCourses());
     document.querySelector('.filter-cse').addEventListener('click', () => displayCourses('CSE'));
-    document.querySelector('.filter-wdd').addEventListener('click', () => displayCourses('WDD'));
-    
-    
+    document.querySelector('.filter-wdd').addEventListener('click', () => displayCourses('WDD'));      
     
     displayCourses();
 
@@ -170,6 +168,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const totalCredits = courses.reduce((accumulator, course) => accumulator + course.credits, 0);
     document.getElementById('credits').innerHTML += `<p>${totalCredits}</p>`;
-
     
 });
