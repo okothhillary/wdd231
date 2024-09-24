@@ -1,0 +1,25 @@
+[
+    {
+        "familyName": "Aloos",
+        "joinedDate": "12/9/2023",
+        "numberOfRecords": 4,
+        "bishopVisited": true,
+        "familyMembers": [
+            {
+                "name": "Hillary",
+                "gender": "Male",
+                "birthdate": "1999-04-01"
+            },
+            {
+                "name": "Cymona",
+                "gender": "Female",
+                "birthdate": "1998-09-12"
+            },
+            {
+                "name": "FE!N",
+                "gender": "Male",
+                "birthdate": "2027-09-13"
+            }
+        ]
+    }
+]
