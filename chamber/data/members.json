@@ -1,0 +1,68 @@
+{
+    "members": [
+        {
+            "name": "Tech Innovators",
+            "address": "123 Tech Lane, Silicon Valley, CA",
+            "phone": "123-456-7890",
+            "website": "www.techinnovators.com",
+            "image": "tech_innovators.png",
+            "membership_level": 1,
+            "info": "Leading provider of tech solutions."
+        },
+        {
+            "name": "Green Earth Supplies",
+            "address": "456 Eco St, Portland, OR",
+            "phone": "234-567-8901",
+            "website": "www.greenearthsupplies.com",
+            "image": "green_earth_supplies.png",
+            "membership_level": 2,
+            "info": "Sustainable products for a greener planet."
+        },
+        {
+            "name": "Healthy Life Foods",
+            "address": "789 Wellness Blvd, Denver, CO",
+            "phone": "345-678-9012",
+            "website": "www.healthylifefoods.com",
+            "image": "healthy_life_foods.png",
+            "membership_level": 3,
+            "info": "Organic and healthy food options."
+        },
+        {
+            "name": "Design Masters",
+            "address": "101 Creative Ave, Austin, TX",
+            "phone": "456-789-0123",
+            "website": "www.designmasters.com",
+            "image": "design_masters.png",
+            "membership_level": 1,
+            "info": "Innovative design solutions for all sectors."
+        },
+        {
+            "name": "Building Solutions Inc.",
+            "address": "202 Construct Rd, Chicago, IL",
+            "phone": "567-890-1234",
+            "website": "www.buildingsolutions.com",
+            "image": "building_solutions.png",
+            "membership_level": 2,
+            "info": "Quality construction and engineering services."
+        },
+        {
+            "name": "Finance Experts",
+            "address": "303 Wealth St, New York, NY",
+            "phone": "678-901-2345",
+            "website": "www.financeexperts.com",
+            "image": "finance_experts.png",
+            "membership_level": 3,
+            "info": "Expert financial advice and investment solutions."
+        },
+        {
+            "name": "Travel Ventures",
+            "address": "404 Adventure Rd, Miami, FL",
+            "phone": "789-012-3456",
+            "website": "www.travelventures.com",
+            "image": "travel_ventures.png",
+            "membership_level": 1,
+            "info": "Tailor-made travel experiences for all."
+        }
+    
+    ] 
+}
