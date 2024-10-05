@@ -220,7 +220,7 @@ function shuffleCompanies(companies) {
 const randomAdvertising = async () => {
 
     const membersData = await getMembersData ();
-    const filteredCompanies = await membersData.filter(company => company.membershipLvl >= 2)
+    const filteredCompanies = await membersData.filter(company => company.membership_level >= 2)
     const randomCompanies = shuffleCompanies(filteredCompanies);
     const selectedCompanies = randomCompanies.slice(0, 3);
 
