@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the directory of companies associated with Managua Chamber of Commerce, here you will find all the information related with the local bussines and companies.">
+    <meta name="description" content="This is the home page of the Managua Chamber of Commerce, which promotes economic development, supports local businesses, and fosters investment opportunities in Nicaragua’s vibrant capital">
     <meta name="author" content="Rodolfo Menocal">
-    <meta property="og:title" content="Directory | Managua Chamber of Commerce">        
+    <meta property="og:title" content="Home Page | Managua Chamber of Commerce">        
     <meta property="og:type" content="website">
-    <meta property="og:description" content="This is the directory of companies associated with Managua Chamber of Commerce, here you will find all the information related with the local bussines and companies.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Menocas17/wdd231/refs/heads/main/chamber/managua-brands.webp">
-    <meta property="og:url" content="https://menocas17.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="This is the home page of the Managua Chamber of Commerce, which promotes economic development, supports local businesses, and fosters investment opportunities in Nicaragua’s vibrant capital.">
+    <meta property="og:image" content="https://menocas17.github.io/wdd231/chamber/images/possibleHeroImages/hero5.webp">
+    <meta property="og:url" content="https://menocas17.github.io/wdd231/chamber/index.html">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Directory | Managua Chamber of Commercer</title>
+    <title>Home Page | Managua Chamber of Commercer</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
@@ -19,9 +19,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/possibleHeroImages/hero5.webp" as="image">
     <script src="scripts/chamber.js" defer></script>
 </head>
-<body id="directory-page">
+<body id="home-page">
     <header class="header">
         <a href="index.html" class="logo-name">
             
@@ -36,8 +37,8 @@
 
         <nav class="open-menu">
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -46,28 +47,51 @@
         <button id="menu" aria-label="Menu button"></button>
 
     </header>
-    
 
+    <section class="hero">
+        <div class="content-hero">
+            <h2 class="fade-animation hero-phrase">Discover a whole new way to make business</h2>
+
+            <a href="" class="join-button fade-animation">Join Us</a>
+        </div>
+    </section>
+   
     <main class="container">
+        <h2 class="title">Home</h2>
+        <section class="home">
+            <article class="home-card">
+                <h3>Events</h3>
 
-        <h2 class="directory-tittle">Directory of Companies and Local Business</h2>
+                <ul class="upcoming-events">
+                    <li>Information talk on trade / Oct 09 </li>
+                    <li>Small and medium-sized business exhibition fair / Oct 17</li>
+                    <li>Chamber of Commerce Halloween party / Oct 31</li>
+                </ul>
+            </article>
 
-        <p class="directory-paragraph">Welcome to the official directory of the Chamber of Commerce of Managua, Nicaragua. As the economic hub of the nation, Managua thrives with a diverse range of businesses and services, each contributing to the city’s growth and development. This directory is designed to connect you with local companies, from small enterprises to established corporations, all committed to driving economic progress in Nicaragua. Whether you’re looking for industry leaders, service providers, or new business opportunities, our directory offers a comprehensive resource to support your business needs. Explore and engage with Managua’s vibrant commercial community today. </p>
+            <article class="home-card">
+                <h3>Current Weather</h3>
 
-        <button id="gridButton" class="view-button grid-button">
-            <span>&#9783;</span>  Grid
+                <div class="weather-display">
+                    <div id="weather-info">
 
-        </button>
-        <button id="listButton" class="view-button">
-             <span>&#9776;</span> List
-        </button>
+                    </div>
+                </div>
 
-        <section id="cards-section"> 
+            </article>
 
+            <article class="home-card">
+                <h3>Weather Forecast</h3>
+                <ul id="forecast-weather-info">
 
-
+                </ul>
+            </article>
         </section>
 
+        <h2 class="title">Get to Know Us!</h2>
+        <section id="advertising">
+            
+        </section>
     </main>
 
     <footer>
