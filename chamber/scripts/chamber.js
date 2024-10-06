@@ -1,12 +1,9 @@
-// adding the year and last modified to the footer 
-
 const currentYear = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 
 currentYear.textContent = new Date().getFullYear();
 lastModified.textContent = document.lastModified;
 
-// adding the funcionality to the ham button 
 
 const hamButton = document.querySelector('#menu');
 const navMenu = document.querySelector('.open-menu');
@@ -18,11 +15,8 @@ hamButton.addEventListener('click', () => {
     header.classList.toggle('gap')
 })
 
-//Directory page scripts 
 
-
-
-const url = './data/members.json' // fetching the members data from the Json file
+const url = './data/members.json'
 
 const cards = document.querySelector('#cards-section');
 
@@ -42,9 +36,7 @@ const getMembersData = async () => {
     }
 }
  
-
-
-const displayMembersData = (membersData) => {   // Creating the function to display the members data in the directory page
+const displayMembersData = (membersData) => {   
     membersData.forEach (member => {
         let card = document.createElement('article');
         let companyName = document.createElement('h3');
@@ -55,10 +47,10 @@ const displayMembersData = (membersData) => {   // Creating the function to disp
 
         companyName.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
-        phoneNumber.textContent = `${member.phoneNumber}`;
+        phoneNumber.textContent = `${member.phone}`;
         websiteUrl.textContent = 'Visit Website';
 
-        websiteUrl.setAttribute('href', member.websiteUrl)
+        websiteUrl.setAttribute('href', member.website)
         
         companyLogo.setAttribute('src', member.image);
         companyLogo.setAttribute('alt', `Logo of ${member.name}`);
@@ -86,7 +78,7 @@ const membersDirectory = async (data) => {
     displayMembersData(members);
 }
 
-// Home Page scripts 
+// Home Page Section
 
 const weatherIcon = document.createElement('img');
 const weatherDisplay = document.querySelector('.weather-display')
@@ -94,9 +86,9 @@ const weatherInfo = document.querySelector('#weather-info');
 const forecastInfo = document.querySelector('#forecast-weather-info');
 const advertising = document.querySelector('#advertising');
 
-const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=12.113560033331286&lon=-86.2354811759951&appid=e4ecd0c975a7d843f411d8205c8a8aa3&units=metric';
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=12.113560033331286&lon=-86.2354811759951&appid=4c37122ddbb92926b645b1a37943df60&units=metric';
 
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=12.113560033331286&lon=-86.2354811759951&cnt=24&&appid=e4ecd0c975a7d843f411d8205c8a8aa3&units=metric`
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=12.113560033331286&lon=-86.2354811759951&cnt=24&&appid=4c37122ddbb92926b645b1a37943df60&units=metric`
 
 const fecthingCurrentWeatherData = async () => {
     try {
@@ -182,7 +174,7 @@ async function populatingForecastWeather() {
 
 function populatingCurrentWeather (data){
     weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`);
-    weatherIcon.setAttribute('alt', 'The curretn weather icon');
+    weatherIcon.setAttribute('alt', 'weather icon');
     weatherIcon.setAttribute('width', 150);
     weatherIcon.setAttribute('height', 150);
     weatherDisplay.appendChild(weatherIcon);
@@ -233,11 +225,11 @@ const randomAdvertising = async () => {
         </div>
         
         <div class="advertising-info">
-            <img src="${company.image}" alt="The icon of ${company.name}" width="110" height="110">
+            <img src="${company.image}" alt="company logo" width="110" height="110">
             <div>
-                <p>Email: ${company.email}</p>
-                <p>Phone: ${company.phoneNumber}</p>
-                <a href="${company.websiteUrl}">${company.websiteUrl}</a>
+                <p>Address: ${company.address}</p>
+                <p>Phone: ${company.phone}</p>
+                <a href="${company.website}">${company.website}</a>
             </div>
         </div>
 
@@ -250,7 +242,6 @@ const randomAdvertising = async () => {
 
 randomAdvertising();
 
-//Adding the addEventListener and conditinals to manage the scripts acroos the diferent pages
 
 document.addEventListener('DOMContentLoaded', ()=> {  
     if(document.body.id === 'directory-page') {
@@ -258,8 +249,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         const gridButton = document.querySelector('#gridButton');
         const listButton = document.querySelector('#listButton');
-
-
         const swapingViews = (button) => {
             
             if (button === 'list'){
@@ -267,10 +256,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
             listButton.classList.add('list-button')
 
             cards.classList.remove('grid-view');
-            cards.classList.add('list-view');
-
-            
-            
+            cards.classList.add('list-view');           
 
             }
 
@@ -281,9 +267,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 cards.classList.add('grid-view');
                 cards.classList.remove('list-view');
             }
-            
-
-            
         }
 
         gridButton.addEventListener('click', () =>{
@@ -296,13 +279,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
 
     if(document.body.id === 'home-page') {
-       
-        
         displayCurrentWeather();
         populatingForecastWeather();
     }
-
-    
 })
 
 
