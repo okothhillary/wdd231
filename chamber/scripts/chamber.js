@@ -60,7 +60,7 @@ const displayMembersData = (membersData) => {
 
 
         websiteUrl.classList.add('card-button')
-        card.appendChild(companyLogo);
+        //card.appendChild(companyLogo);
         card.appendChild(companyName);
         card.appendChild(address);
         card.appendChild(phoneNumber);
@@ -224,7 +224,6 @@ const spotLighting = async () => {
         </div>
         
         <div class="advertising-info">
-            <img src="${company.image}" alt="company logo" width="110" height="110">
             <div>
                 <p>Address: ${company.address}</p>
                 <p>Phone: ${company.phone}</p>

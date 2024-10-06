@@ -1,11 +1,9 @@
 :root {
     --Primary-Color: #025c89;
-    --Secondary-Color: #FFB808;
+    --Secondary-Color: #025c89d8;
     --Primary-Color-Var: #025c89d8;
-    --Secondary-Color-Var: #ffc021ee;
+    --Secondary-Color-Var: #fbb911ee;
 }
-
-/* Global Styles, navegation bar and footer  */
 
 html {
     box-sizing: border-box;
@@ -38,8 +36,6 @@ h1 {
     margin: 0;
 }
 
-
-
 .header {
     display: flex;
     flex-direction: column;
@@ -54,7 +50,6 @@ h1 {
 .header.gap {
     gap: 3rem;
 }
-
 
 .logo-name {
     display: flex;
@@ -81,8 +76,6 @@ h1 {
     
 }
 
-
-
 .open-menu {
     display: grid;
     grid-template-rows: 0fr;
@@ -94,9 +87,6 @@ h1 {
     grid-template-rows: 1fr;
     height: 24.6rem;
 }
-
-
-
 
 .nav-menu a {
     position: relative;
@@ -171,9 +161,7 @@ footer img {
 .social-media-links {
     display: flex;
     align-items: center;
-    gap: 2.3rem;
-   
-    
+    gap: 2.3rem;    
 }
 
 .social-media-links a {
@@ -189,15 +177,13 @@ footer img {
     
 }
 
-/* Styling the directory page */
-
-.directory-tittle {
+.directory-title {
     font-size: 3.5rem;
     margin: 5rem 0;
     position: relative;
 }
 
-.directory-tittle::after {
+.directory-title::after {
     content: "";
     position: absolute;
     bottom: 0; 
@@ -238,7 +224,7 @@ footer img {
     cursor: pointer;
 }
 
-.grid-button { /* adding the grid view  */
+.grid-button { 
     background-color: var(--Secondary-Color);
     color: black;
 }
@@ -273,7 +259,7 @@ footer img {
     transform: scale(1.03);
 }
 
-.list-button { /* Addding the  list view  */
+.list-button { 
     background-color: var(--Secondary-Color);
     color: black;
 }
@@ -371,11 +357,11 @@ footer img {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-50px); /* El texto comienza fuera de la vista, desde arriba */
+        transform: translateY(-50px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* El texto termina en su posición original */
+        transform: translateY(0);
     }
 }
 
@@ -400,13 +386,9 @@ footer img {
 
 }
 
-
-
 .home {
     margin-bottom: 5rem;
 }
-
-
 
 .home-card {
     box-shadow: 0 0 10px rgba(0, 0, 0, 14%);
@@ -414,7 +396,6 @@ footer img {
     margin-bottom: 2.5rem;
 }
  
-
 .home-card h3 {
     background-color: var(--Primary-Color);
     color: white;
@@ -446,11 +427,6 @@ footer img {
     justify-self: left;
     
 }
-
-/* #weather-icon {
-    width: 15rem;
-
-} */
 
 #weather-info p {
     line-height: .8;
