@@ -86,9 +86,9 @@ const weatherInfo = document.querySelector('#weather-info');
 const forecastInfo = document.querySelector('#forecast-weather-info');
 const advertising = document.querySelector('#advertising');
 
-const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=12.113560033331286&lon=-86.2354811759951&appid=4c37122ddbb92926b645b1a37943df60&units=metric';
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=40.711073817942136&lon=-74.02917339660162&appid=4c37122ddbb92926b645b1a37943df60&units=metric';
 
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=12.113560033331286&lon=-86.2354811759951&cnt=24&&appid=4c37122ddbb92926b645b1a37943df60&units=metric`
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=40.711073817942136&lon=-74.02917339660162&cnt=24&&appid=4c37122ddbb92926b645b1a37943df60&units=metric`
 
 const fecthingCurrentWeatherData = async () => {
     try {
@@ -220,8 +220,7 @@ const randomAdvertising = async () => {
         advertising.innerHTML += `
         <article class="home-card ads">
         <div class="advertising-card-title">
-            <h3>${company.name}</h3>
-            <p>${company.tagline}</p>
+            <h3>${company.name}</h3>            
         </div>
         
         <div class="advertising-info">
