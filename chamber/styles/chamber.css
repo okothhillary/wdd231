@@ -6,18 +6,18 @@
 }
 
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    line-height:1.5;
+    line-height: 1.5;
 }
 
 .container {
@@ -26,24 +26,24 @@ body {
     text-align: center;
 }
 
-h1, h2, h3 {
-    font-weight: 900;
-    margin: 2.5rem 0;
-}
-
 h1 {
     font-size: 4.4rem;
     margin: 0;
 }
 
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 2.5rem 0;
+}
+
 .header {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 0 ;
+    padding: 1.5rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
     position: sticky;
-    top: 0; 
-    z-index: 100; 
+    top: 0;
+    z-index: 100;
     background-color: white;
 }
 
@@ -61,10 +61,6 @@ h1 {
     color: black;
 }
 
-.main-title p {
-    margin: 0;
-}
-
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -73,7 +69,6 @@ h1 {
     overflow: hidden;
     list-style-type: none;
     margin-bottom: 2rem;
-    
 }
 
 .open-menu {
@@ -105,25 +100,20 @@ h1 {
     background-color: var(--Primary-Color);
     transition: width .3s ease, left .3s ease;
     transform: translateX(-50%);
-
 }
 
-.nav-menu a:hover::after{
+.nav-menu a:hover::after {
     width: 100%;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
 }
 
 .nav-menu a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -.5rem; 
-    left: 50%;
-    width: 100%; 
-    height: .5rem; 
-    background-color: var(--Primary-Color); 
+    width: 100%;
+    height: .5rem;
+    background-color: var(--Primary-Color);
     transition: none;
-  }
+}
 
 #menu {
     background: none;
@@ -136,7 +126,7 @@ h1 {
 }
 
 #menu::before {
-	content: "☰";
+    content: "☰";
 }
 
 #menu.open::before {
@@ -150,7 +140,6 @@ footer {
     text-align: left;
     padding: 0 0 2rem 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
-    
 }
 
 footer img {
@@ -161,7 +150,7 @@ footer img {
 .social-media-links {
     display: flex;
     align-items: center;
-    gap: 2.3rem;    
+    gap: 2.3rem;
 }
 
 .social-media-links a {
@@ -174,7 +163,6 @@ footer img {
 
 .student-info p {
     margin: 0 0 .4rem 0;
-    
 }
 
 .directory-title {
@@ -186,13 +174,13 @@ footer img {
 .directory-title::after {
     content: "";
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%; 
-    height: 3px; 
-    background-color: var(--Secondary-Color); 
-  }
+    width: 50%;
+    height: 3px;
+    background-color: var(--Secondary-Color);
+}
 
 .directory-paragraph {
     text-align: left;
@@ -224,17 +212,9 @@ footer img {
     cursor: pointer;
 }
 
-.grid-button { 
-    background-color: var(--Secondary-Color);
-    color: black;
-}
-
 .grid-view {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(350px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
     margin-bottom: 3rem;
 }
@@ -243,7 +223,7 @@ footer img {
     display: none;
 }
 
-.grid-view article{
+.grid-view article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -254,12 +234,11 @@ footer img {
     transition: transform 0.2s;
 }
 
-
-.grid-view article:hover{
+.grid-view article:hover {
     transform: scale(1.03);
 }
 
-.list-button { 
+.list-button {
     background-color: var(--Secondary-Color);
     color: black;
 }
@@ -267,7 +246,6 @@ footer img {
 .list-view {
     display: flex;
     flex-direction: column;
-    
 }
 
 .list-view article {
@@ -280,11 +258,11 @@ footer img {
 }
 
 .list-view article:nth-child(odd) {
-	background-color: var(--Primary-Color-Var);
+    background-color: var(--Primary-Color-Var);
     color: white;
 }
 
-.list-view article img { 
+.list-view article img {
     display: none;
 }
 
@@ -292,7 +270,7 @@ footer img {
     font-size: 2rem;
 }
 
-.card-button { /* stlying the card button  */
+.card-button {
     background-color: var(--Secondary-Color-Var);
     font-size: 1.2rem;
     padding: 1.2rem;
@@ -301,11 +279,10 @@ footer img {
     color: black;
     transition: transform 0.2s;
 }
+
 .card-button:hover {
     transform: scale(1.07);
 }
-
-/* Styling the home page  */
 
 .hero {
     height: 50rem;
@@ -332,10 +309,16 @@ footer img {
     gap: 3rem;
 }
 
+.hero-phrase {
+    text-transform: capitalize;
+    font-size: 3rem;
+    line-height: 5.5rem;
+}
+
 .join-button {
     background-color: var(--Secondary-Color-Var);
     font-size: 2rem;
-    font-weight: bold;    
+    font-weight: bold;
     padding: 1.5rem;
     border-radius: 1rem;
     text-decoration: none;
@@ -347,17 +330,10 @@ footer img {
     color: white;
 }
 
-
-.hero-phrase {
-    text-transform:capitalize;
-    font-size: 3rem;
-    line-height: 5.5rem;
-}
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-50px); 
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
@@ -368,6 +344,10 @@ footer img {
 .fade-animation {
     opacity: 0;
     animation: fadeInDown 2.5s ease forwards;
+}
+
+.home {
+    margin-bottom: 5rem;
 }
 
 .title {
@@ -383,11 +363,6 @@ footer img {
     gap: 2rem;
     padding: 2rem;
     margin: 2.5rem 3rem;
-
-}
-
-.home {
-    margin-bottom: 5rem;
 }
 
 .home-card {
@@ -395,7 +370,7 @@ footer img {
     border-radius: .5rem;
     margin-bottom: 2.5rem;
 }
- 
+
 .home-card h3 {
     background-color: var(--Primary-Color);
     color: white;
@@ -407,11 +382,7 @@ footer img {
 
 .weather-display {
     display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(130px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     align-items: center;
     justify-items: center;
     padding: 1rem;
@@ -420,81 +391,4 @@ footer img {
 
 .weather-display > * {
     direction: ltr;
-
-}
-
-#weather-info {
-    justify-self: left;
-    
-}
-
-#weather-info p {
-    line-height: .8;
-    text-align: left;
-    
-}
-
-#weather-info p:nth-of-type(2) {
-    text-transform: capitalize;
-}
-
-#forecast-weather-info {
-    list-style-type: none;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.8rem;
-    font-size: 2rem;
-}
-
-#advertising {
-    margin-bottom: 10rem;
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(320px, 1fr)
-    );
-
-    gap: 2rem;
-}
-
-.advertising-info {
-    padding: 2rem;
-}
-
-.home-card.ads {
-    border-radius: 2rem;
-    transition: transform 0.2s;
-}
-
-.home-card.ads:hover {
-    transform: scale(1.03);
-}
-
-.home-card.ads h3{
-    background-color: unset;
-    color: black;
-}
-
-.advertising-card-title {
-    border-bottom: 2px solid rgb(242 233 233);
-    line-height: 1;
-    padding: 2rem;
-}
-.advertising-card-title h3 {
-    font-size: 3rem;
-}
-
-.advertising-card-title p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.advertising-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
 }
