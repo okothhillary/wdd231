@@ -24,6 +24,12 @@ const memberships = [
 const currentTimestamp = new Date().toLocaleString();
 document.getElementById('timestamp').value = currentTimestamp;
 
+const yearElem = document.querySelector("#currentyear");
+const lastModElem = document.querySelector("#lastModified");
+
+yearElem.textContent = new Date().getFullYear();
+lastModElem.textContent = document.lastModified;
+
 function createMembershipCards() {
     const cardsContainer = document.getElementById('membership-cards');
     const modalsContainer = document.getElementById('modals');
