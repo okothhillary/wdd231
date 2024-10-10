@@ -151,9 +151,7 @@ footer {
     
 }
 
-main{
-    height: -120px;
-}
+
 
 .push{
     height: 120px;
@@ -250,7 +248,7 @@ form label {
       appearance: none;
       font-size: large;
     }
-  }
+  
   input:-webkit-autofill{
     -webkit-text-fill-color: #3D405B;
   }
