@@ -62,8 +62,7 @@ h1, h2, h3 {
 
 main{
 
-    min-height: 100vh;
-    margin-bottom: -150px;
+    height: auto;
 
 }
 
@@ -202,8 +201,9 @@ h3{
 
 form {
     margin: 1rem 2%;
+}    
   
-    label {
+form label {
       display: block;
       font-size: 2rem;
       color: purple;
