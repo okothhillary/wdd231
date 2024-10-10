@@ -1,34 +1,34 @@
-// Membership data
 const memberships = [
     {
         title: "NP Membership",
         description: "Non-profit, no fee.",
-        benefits: "Details about NP membership benefits."
+        benefits: "Direct phone call access to other NGOs and non profits like you."
     },
     {
         title: "Bronze Membership",
         description: "Basic membership level.",
-        benefits: "Details about Bronze membership benefits."
+        benefits: "Access to customers within your town."
     },
     {
         title: "Silver Membership",
         description: "Intermediate membership level.",
-        benefits: "Details about Silver membership benefits."
+        benefits: "Access to customers within the whole state and free delivery for them."
     },
     {
         title: "Gold Membership",
         description: "Premium membership level.",
-        benefits: "Details about Gold membership benefits."
+        benefits: "Access to country-wide customers and free shipping for them."
     }
 ];
 
-// Function to create cards and modals dynamically
+const currentTimestamp = new Date().toLocaleString();
+document.getElementById('timestamp').value = currentTimestamp;
+
 function createMembershipCards() {
     const cardsContainer = document.getElementById('membership-cards');
     const modalsContainer = document.getElementById('modals');
 
     memberships.forEach((membership, index) => {
-        // Create card
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
@@ -38,7 +38,6 @@ function createMembershipCards() {
         `;
         cardsContainer.appendChild(card);
 
-        // Create modal
         const modal = document.createElement('div');
         modal.id = `modal-${index}`;
         modal.className = 'modal';
@@ -52,7 +51,6 @@ function createMembershipCards() {
         modalsContainer.appendChild(modal);
     });
 
-    // Add event listeners to open and close modals
     const modalLinks = document.querySelectorAll('.modal-link');
     modalLinks.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -71,7 +69,6 @@ function createMembershipCards() {
         });
     });
 
-    // Close modals when clicking outside the modal content
     window.onclick = function(event) {
         const modals = document.querySelectorAll('.modal');
         modals.forEach(modal => {
@@ -82,5 +79,4 @@ function createMembershipCards() {
     };
 }
 
-// Call the function to build cards and modals
 createMembershipCards();

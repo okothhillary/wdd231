@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the thank you for the H.M Ventures Chamber of Commerce for business connections and facilitating e-commerce within Silicon valley and its surrounding areas.">
-    <meta name="author" content="Hillary Okoth">
-    <meta property="og:title" content="Thank you|H.M Ventures Chamber of Commerce">        
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="This is the thank you page for the H.M Ventures Chamber of Commerce for business connections and facilitating e-commerce within Silicon valley and its surrounding areas.">
-    <meta property="og:image" content="https://okothhillary.github.io/wdd231/chamber/images/hero.webp">
-    <meta property="og:url" content="https://okothhillary.github.io/wdd231/chamber/index.html">
-    <meta name="twitter:card" content="large-image">
-    <title>Thank You! | H.M Ventures Chamber of Commerce</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/chamber.css">
-    <link rel="stylesheet" href="styles/chamber-desktop.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="./images/hero.webp" as="image">
-    <script src="scripts/chamber.js" defer></script>
-</head>
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
 
+        .thank-you-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .user-info span {
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <body>
 
-  <main>
-    <h1>Temple Appointment Details</h1>
+    <div class="thank-you-container">
+        <h1>Together is Better!</h1>
+        <p>We appreciate you taking the time to fill out the membership application.</p>
+        
+        <div class="user-info">
+            <p><span>First Name:</span> <span id="first-name"></span></p>
+            <p><span>Last Name:</span> <span id="last-name"></span></p>
+            <p><span>Email:</span> <span id="email"></span></p>
+            <p><span>Mobile Number:</span> <span id="mobile-number"></span></p>
+            <p><span>Business Name:</span> <span id="business-name"></span></p>
+            <p><span>Form Submitted on:</span> <span id="timestamp"></span></p>
+        </div>
 
-    <div id="results"></div>
+        <a href="index.html">Check out Upcoming Events.</a>
+    </div>
 
-  </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
 
-
-
+        document.getElementById('first-name').textContent = urlParams.get('first-name');
+        document.getElementById('last-name').textContent = urlParams.get('last-name');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('mobile-number').textContent = urlParams.get('mobile');
+        document.getElementById('business-name').textContent = urlParams.get('organization');
+        document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+    </script>
 </body>
 </html>
-
- 
