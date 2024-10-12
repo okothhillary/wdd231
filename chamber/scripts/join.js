@@ -30,6 +30,16 @@ const lastModElem = document.querySelector("#lastModified");
 yearElem.textContent = new Date().getFullYear();
 lastModElem.textContent = document.lastModified;
 
+const menuBtn = document.querySelector('#menu');
+const menuNav = document.querySelector('.open-menu');
+const headerElem = document.querySelector('.header');
+
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('open');
+    menuNav.classList.toggle('open');
+    headerElem.classList.toggle('gap');
+});
+
 function createMembershipCards() {
     const cardsContainer = document.getElementById('membership-cards');
     const modalsContainer = document.getElementById('modals');

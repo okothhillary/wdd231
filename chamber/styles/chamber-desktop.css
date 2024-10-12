@@ -1,6 +1,5 @@
 @media (min-width: 764px) { 
 
-    /* Global Styles, navegation bar and footer  */
     .header {
         display: flex;
         flex-direction: row;
@@ -102,7 +101,6 @@
     
 @media (min-width: 1080px) { 
 
-    /* Styling the directory page  */
     .list-view article{
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr;
