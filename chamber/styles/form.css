@@ -285,8 +285,11 @@ form label {
 }
 
 .card a {
-    color: #007BFF;
-    text-decoration: none;
+    color: black;
+    text-decoration: none;    
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .card a:hover {
