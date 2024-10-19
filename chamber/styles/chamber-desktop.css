@@ -160,12 +160,6 @@ figure {
 }
 
 
-
-.lazy {
-    filter: blur(10px);
-    transition: filter 0.5s;
-}
-
 .lazy.loaded {
     filter: none;
 }
