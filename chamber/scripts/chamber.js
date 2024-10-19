@@ -4,6 +4,45 @@ const lastModElem = document.querySelector("#lastModified");
 yearElem.textContent = new Date().getFullYear();
 lastModElem.textContent = document.lastModified;
 
+const visitorMessage = document.getElementById("visitorMessage");
+
+const lastVisit = localStorage.getItem("lastVisit");
+const now = Date.now();
+
+if (!lastVisit) {
+    visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
+    if (daysSinceLastVisit < 1) {
+        visitorMessage.textContent = "Back so soon! Awesome!";
+    } else if (daysSinceLastVisit === 1) {
+        visitorMessage.textContent = "You last visited 1 day ago.";
+    } else {
+        visitorMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
+    }
+}
+
+localStorage.setItem("lastVisit", now);
+
+
+const lazyImages = document.querySelectorAll("img.lazy");
+
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.getAttribute("data-src");
+            img.onload = () => img.classList.add("loaded");
+            observer.unobserve(img);
+        }
+    });
+});
+
+lazyImages.forEach(img => {
+    imageObserver.observe(img);
+});
+
 const menuBtn = document.querySelector('#menu');
 const menuNav = document.querySelector('.open-menu');
 const headerElem = document.querySelector('.header');

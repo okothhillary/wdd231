@@ -21,9 +21,9 @@
     <link rel="preload" href="./images/hero.webp" as="image">
     <script src="scripts/chamber.js" defer></script>
 </head>
-<body id="home-page">
+<body id="discover-page">
     <header class="header">
-        <a href="index.html" class="logo-name">
+        <a href="discover.html" class="logo-name">
             
             <img src="images/hmventures.webp" alt="HM Ventures logo" width="100">
 
@@ -35,10 +35,10 @@
 
         <nav class="open-menu">
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
 
@@ -46,51 +46,74 @@
 
     </header>
 
-    <section class="hero">
-        <div class="content-hero">
-           <!-- <h2 class="fade-animation hero-phrase">"Together is Better"</h2>-->
-            <a href="./images/hero.webp" class="join-button fade-animation">Register with us</a>
-        </div>
-    </section>
-   
-    <main class="container">
-        <h2 class="title">Check out what's next!</h2>
-        <section class="home">
-            <article class="home-card">
-                <h3>Upcoming Speakers and Events</h3>
-
-                <ul class="upcoming-events">
-                    <li>Travel Ventures New Product | 16th Oct</li>
-                    <li>Special Guest Invite: Marc Andreesen | 20th Oct</li>
-                    <li>Forbes Top 40 Under 40 | Oct 25th</li>
-                </ul>
-            </article>
-
-            <article class="home-card">
-                <h3>Current Weather</h3>
-
-                <div class="weather-display">
-                    <div id="weather-info">
-
-                    </div>
-                </div>
-
-            </article>
-
-            <article class="home-card">
-                <h3>Weather Forecast</h3>
-                <ul id="forecast-weather-info">
-
-                </ul>
-            </article>
+    <main class="grid-container">
+        <aside class="sidebar">
+            <section class="visitor-message" id="visitorMessage">
+            </section>
+    
+            <section class="info-card">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec.</p>
+            </section>
+    
+            <section class="calendar">
+                <h2>Events Calendar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </aside>
+    
+        <section class="photo-gallery">
+            <figure>
+                <img data-src="images/town-square.webp" alt="Scenic Beach" class="lazy">
+                <figcaption>Beach next to the city</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/night-market.webp" alt="City Museum" class="lazy">
+                <figcaption>City Museum</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/historic-street.webp" alt="National Park" class="lazy">
+                <figcaption>National Park</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/historic-street.webp" alt="Historic Street" class="lazy">
+                <figcaption>Historic Street</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/town-square.webp" alt="Town Square" class="lazy">
+                <figcaption>Town Square</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/night-market.webp" alt="Night Market" class="lazy">
+                <figcaption>Night Market</figcaption>
+            </figure>
         </section>
 
-        <h2 class="title">H.M Ventures Leading Companies!</h2>
-        <section id="advertising">
-            
-        </section>
-        
         <div class="push"></div>
+        
     </main>
 
     <footer>
