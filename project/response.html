@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Response</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .thank-you-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .user-info {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .user-info span {
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <h1>Systems That Work</h1>
+        <p>Thanks for your feedback!</p>
+        
+        <div class="user-info">
+            <p><span>First Name:</span> <span id="first-name"></span></p>
+            <p><span>Last Name:</span> <span id="last-name"></span></p>
+            <p><span>Email:</span> <span id="email"></span></p>
+            <p><span>Mobile Number:</span> <span id="mobile-number"></span></p>
+            <p><span>New Product Suggestion:</span> <span id="product"></span></p>
+        </div>
+
+        <a href="index.html">Check out the Demo Again.</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        document.getElementById('first-name').textContent = urlParams.get('first-name');
+        document.getElementById('last-name').textContent = urlParams.get('last-name');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('mobile-number').textContent = urlParams.get('mobile');
+        document.getElementById('product').textContent = urlParams.get('product');
+        document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+    </script>
+</body>
+</html>

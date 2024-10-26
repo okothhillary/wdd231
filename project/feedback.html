@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the feedback page for The Biome System which helps schools manage their inventory and accounting for canteens in boarding schools.">
+    <meta name="author" content="Hillary Okoth">
+    <meta property="og:title" content="Home Page |The Biome System">        
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is the feedback page for The Biome System which helps schools manage their inventory and accounting for canteens in boarding schools.">
+    <meta property="og:image" content="https://okothhillary.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://okothhillary.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="large-image">
+    <title>Feedback Page</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/biome-desktop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./images/hero.webp" as="image">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script src="scripts/biome.js" defer></script>
+</head>
+
+<body id="join-page">
+    <header class="header">
+        <a href="index.html" class="logo-name">
+
+            <img src="images/biome-logo.png" alt="The Biome logo" width="100">
+
+            <div class="main-title">
+                <h1>The Biome</h1>
+                <p>Systems That Work</p>
+            </div>
+        </a>
+
+        <nav class="open-menu">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shopping.html" class="active">Shopping</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu" aria-label="Menu button"></button>
+
+    </header>
+
+    
+
+    <main class="container">
+
+        <h2>How was your experience?</h2>
+
+        <form id="membership-form" action="response.html" method="GET">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+          
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+          
+            <label for="org-title">New Product You'd like to see:</label>
+            <input type="text" id="product" name="product" title="Enter the name of the product" autocomplete="product-name" pattern="[A-Za-z\s-]{7,}" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@example.com" required>
+          
+            <label for="mobile">Mobile Phone Number:</label>
+            <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" autocomplete="tel" required>
+          
+           
+            <label for="membership">Age:</label>
+            <select id="membership" name="membership" title="Select your membership level" required>
+            <option value="" disabled selected>Age</option>
+              <option value="np-membership">15</option>
+              <option value="bronze">16</option>
+              <option value="silver">17</option>
+              <option value="gold">18</option>
+            </select>
+          
+            <label for="description">What can we do to improve:</label>
+            <textarea id="description" name="description" title="Describe your experience" rows="4" cols="50"></textarea>
+          
+            <input type="hidden" id="timestamp" name="timestamp" value=""><br>
+          
+            <input type="submit" value="Use The Biome System.">
+            <br>
+        </form>          
+          
+
+        <div id="membership-cards" class="membership-cards"></div>
+
+        <div id="modals"></div>
+
+        <div class="push"></div>         
+
+    </main>
+
+    <footer>
+        <div class="name-and-address">
+            <h2>The Biome</h2>
+
+        </div>
+        <div class="social-media-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook logo" loading="lazy" width="80" height="40"></a>
+            <a href="#"> <img src="images/instagram.png" alt="Instagram logo" loading="lazy" width="80" height="40"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter logo" loading="lazy" width="80" height="40"></a>
+        </div>
+        <div class="student-info">
+            <p><strong>WDD 231</strong></p>
+            <p>Hillary Okoth</p>
+            <p>©<span id="currentyear"></span> The Biome</p>
+            <p> <strong>Last Modification: </strong><span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

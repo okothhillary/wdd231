@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page for The Biome System which helps schools manage their inventory and accounting for canteens in boarding schools.">
+    <meta name="author" content="Hillary Okoth">
+    <meta property="og:title" content="Home Page |The Biome System">        
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This is the home page for The Biome System which helps schools manage their inventory and accounting for canteens in boarding schools.">
+    <meta property="og:image" content="https://okothhillary.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://okothhillary.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="large-image">
+    <title>Shopping Page</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/biome.css">
+    <link rel="stylesheet" href="styles/biome-desktop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./images/hero.webp" as="image">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script src="scripts/biome.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo-name">
+            <img src="images/biome-logo.png" alt="The Biome logo" width="100">
+            <div class="main-title">
+                <h1>The Biome</h1>
+                <p>Systems that Work</p>                
+            </div>
+        </a>
+        <nav class="open-menu">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shopping.html" class="active">Shopping</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <button id="menu" aria-label="Menu button"></button>
+    </header>
+
+    <main class="container">
+        <h2 class="title">Available Items</h2>
+        <div id="product-list" class="grid-view"></div>
+
+        <div class="main-content">
+            <div id="product-list" class="product-list"></div>
+            <div id="cart" class="cart">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <button id="buy-btn">Buy All</button>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-info"></p>
+            </div>
+        </div>
+    </main>    
+    
+    <footer>
+        <div class="name-and-address">
+            <h2>The Biome</h2>
+            
+        </div>
+        <div class="social-media-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook logo" loading="lazy" width="80" height="40"></a>
+            <a href="#"> <img src="images/instagram.png" alt="Instagram logo" loading="lazy" width="80" height="40"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter logo" loading="lazy" width="80" height="40"></a>
+        </div>
+        <div class="student-info">
+            <p><strong>WDD 231</strong></p>
+            <p>Hillary Okoth</p>
+            <p>©<span id="currentyear"></span>The Biome</p>
+            <p> <strong>Last Modification: </strong><span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>

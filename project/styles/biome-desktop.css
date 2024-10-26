@@ -1,0 +1,242 @@
+@media (min-width: 764px) { 
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 0;
+    }
+
+    #menu {
+        display: none;
+      }  
+
+    .open-menu {
+        grid-template-rows: 1fr;
+        height: auto;
+        transition: none;
+    }
+
+    .open-menu.open {
+        height: auto;
+    }
+
+    footer {
+        flex-direction: row;
+        gap: 5rem;
+        padding: 1rem;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        
+    }
+
+
+    /* Styling the directory page  */
+
+    .list-view article{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 14%);
+        padding: 2rem;
+        height: 18rem;
+        justify-items: center;
+        align-items: center;
+    } 
+
+    /* Styling the home page  */
+    .hero {
+        height: 55rem;
+    }
+
+    .hero-phrase {
+        text-transform:capitalize;
+        font-size: 5rem;
+        line-height: 7.5rem;
+    }
+    
+    .join-button {
+        font-size: 2.5rem;
+    }
+
+    .content-hero {
+        gap: 6rem;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .home-card {
+        margin: 0;
+    }
+
+    #weather-info {
+        justify-self: center;
+        
+    }
+
+    .title {
+        width: 50%;
+        margin: 4rem auto;
+    }
+
+    .weather-display img {
+        grid-row: 1 / 2;
+    }
+}
+
+/*Discover page*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Sidebar Cards Styling */
+.info-card, .calendar {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Calendar Styling */
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.lazy.loaded {
+    filter: none;
+}
+
+figcaption {
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.push{
+    height: 120px;
+}
+
+
+/* Tablet View */
+@media (max-width: 1080px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .side-bar {
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .photo-gallery {
+        max-width: 100%; 
+        grid-template-columns: 1fr;
+    }
+
+    /* Remove hover effect on mobile */
+    img {
+        object-fit: contain;
+    }
+
+   
+
+
+    
+}
+
+/* Image Hover Effect (Only on Desktop) */
+@media (min-width: 768px) {
+    figure:hover img {
+        transform: scale(1.05); /* Slight zoom on hover */
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+    
+@media (min-width: 1080px) { 
+
+    .list-view article{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 14%);
+        padding: 2rem;
+        height: 12.5rem;
+        justify-items: center;
+        align-items: center;
+    } 
+}
+
+@media (min-width: 1289px) { 
+    #weather-info {
+        justify-self: left;
+        
+    }
+
+    .weather-display img {
+        grid-column: 2/3;
+    }
+}
+
